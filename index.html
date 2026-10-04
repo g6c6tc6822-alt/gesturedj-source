@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GestureDJ installieren</title>
+<link rel="apple-touch-icon" href="icon.png">
+<style>
+  :root { --bg:#0e0f0e; --card:#191b19; --text:#f2f4f2; --muted:#a3aba4; --accent:#1db954; --line:#2a2e2a; }
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) { --bg:#f5f7f5; --card:#ffffff; --text:#121412; --muted:#5a635b; --line:#dde3dd; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font:16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+  main { max-width:560px; margin:0 auto; padding:32px 16px 48px; }
+  header { display:flex; gap:16px; align-items:center; margin-bottom:24px; }
+  header img { width:72px; height:72px; border-radius:16px; }
+  h1 { font-size:26px; margin:0; }
+  .sub { color:var(--muted); margin:2px 0 0; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:18px; margin:14px 0; }
+  .step { display:flex; gap:12px; }
+  .num { flex:none; width:28px; height:28px; border-radius:50%; background:var(--accent); color:#000; font-weight:700; display:grid; place-items:center; }
+  .step h2 { font-size:17px; margin:2px 0 6px; }
+  .step p { margin:0 0 10px; color:var(--muted); }
+  a.btn { display:block; text-align:center; background:var(--accent); color:#000; font-weight:600; text-decoration:none; padding:13px; border-radius:12px; margin-top:8px; }
+  a.btn.alt { background:transparent; color:var(--text); border:1px solid var(--line); }
+  code { display:block; word-break:break-all; background:var(--bg); border:1px solid var(--line); padding:10px; border-radius:8px; font-size:13px; }
+  ul { padding-left:20px; margin:6px 0 0; color:var(--muted); }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <img src="icon.png" alt="">
+    <div>
+      <h1>GestureDJ</h1>
+      <p class="sub">Spotify per Handgesten steuern</p>
+    </div>
+  </header>
+
+  <div class="card">
+    <ul>
+      <li>☝️ Zeigefinger-Kreis: lauter / leiser</li>
+      <li>✋ Hand wischen: nächster / vorheriger Song</li>
+      <li>✋ Hand 1 Sek. halten: Play / Pause</li>
+    </ul>
+  </div>
+
+  <div class="card step">
+    <div class="num">1</div>
+    <div>
+      <h2>Bei Justin freischalten lassen</h2>
+      <p>Schick ihm die E-Mail-Adresse deines Spotify-Kontos. Ohne Freischaltung verbindet sich die App nicht.</p>
+    </div>
+  </div>
+
+  <div class="card step">
+    <div class="num">2</div>
+    <div>
+      <h2>SideStore installieren (einmalig)</h2>
+      <p>Kostenloser App-Store, der Apps alle 7 Tage selbst auf dem iPhone erneuert. Einmalig brauchst du einen PC und deine Apple-ID.</p>
+      <a class="btn alt" href="https://docs.sidestore.io/docs/installation/prerequisites">Anleitung SideStore</a>
+    </div>
+  </div>
+
+  <div class="card step">
+    <div class="num">3</div>
+    <div>
+      <h2>GestureDJ hinzufügen</h2>
+      <p>Diese Seite auf dem iPhone öffnen und tippen:</p>
+      <a class="btn" href="sidestore://source?url=https://raw.githubusercontent.com/g6c6tc6822-alt/gesturedj-source/main/apps.json">In SideStore öffnen</a>
+      <a class="btn alt" href="altstore://source?url=https://raw.githubusercontent.com/g6c6tc6822-alt/gesturedj-source/main/apps.json">In AltStore öffnen</a>
+      <p style="margin-top:12px">Oder in SideStore unter Quellen → + diese Adresse einfügen:</p>
+      <code>https://raw.githubusercontent.com/g6c6tc6822-alt/gesturedj-source/main/apps.json</code>
+      <p style="margin-top:12px">Dann GestureDJ antippen → Installieren.</p>
+    </div>
+  </div>
+
+  <div class="card step">
+    <div class="num">4</div>
+    <div>
+      <h2>Erster Start</h2>
+      <p>Kamera erlauben, kurz zu Spotify springen und bestätigen. Handy aufstellen, Hand 30–60 cm vor die Frontkamera.</p>
+    </div>
+  </div>
+</main>
+</body>
+</html>
