@@ -22,7 +22,8 @@
   .num { flex:none; width:28px; height:28px; border-radius:50%; background:var(--accent); color:#000; font-weight:700; display:grid; place-items:center; }
   .step h2 { font-size:17px; margin:2px 0 6px; }
   .step p { margin:0 0 10px; color:var(--muted); }
-  a.btn { display:block; text-align:center; background:var(--accent); color:#000; font-weight:600; text-decoration:none; padding:13px; border-radius:12px; margin-top:8px; }
+  button.btn { width:100%; border:0; font:inherit; cursor:pointer; }
+  a.btn, button.btn { display:block; text-align:center; background:var(--accent); color:#000; font-weight:600; text-decoration:none; padding:13px; border-radius:12px; margin-top:8px; }
   a.btn.alt { background:transparent; color:var(--text); border:1px solid var(--line); }
   code { display:block; word-break:break-all; background:var(--bg); border:1px solid var(--line); padding:10px; border-radius:8px; font-size:13px; }
   ul { padding-left:20px; margin:6px 0 0; color:var(--muted); }
@@ -67,12 +68,14 @@
     <div class="num">3</div>
     <div>
       <h2>GestureDJ hinzufügen</h2>
-      <p>Diese Seite auf dem iPhone öffnen und tippen:</p>
-      <a class="btn" href="sidestore://source?url=https://raw.githubusercontent.com/g6c6tc6822-alt/gesturedj-source/main/apps.json">In SideStore öffnen</a>
+      <p><b>Erst wenn SideStore installiert ist</b> (Schritt 2), sonst meldet Safari „Adresse ungültig“.</p>
+      <p><b>Sicherster Weg:</b> Adresse kopieren, SideStore öffnen → <b>Sources</b> (Quellen) → <b>+</b> → einfügen → Hinzufügen.</p>
+      <button class="btn" id="copy" type="button">Quellen-Adresse kopieren</button>
+      <code id="src">https://raw.githubusercontent.com/g6c6tc6822-alt/gesturedj-source/main/apps.json</code>
+      <p style="margin-top:14px">Oder direkt öffnen:</p>
+      <a class="btn alt" href="sidestore://source?url=https://raw.githubusercontent.com/g6c6tc6822-alt/gesturedj-source/main/apps.json">In SideStore öffnen</a>
       <a class="btn alt" href="altstore://source?url=https://raw.githubusercontent.com/g6c6tc6822-alt/gesturedj-source/main/apps.json">In AltStore öffnen</a>
-      <p style="margin-top:12px">Oder in SideStore unter Quellen → + diese Adresse einfügen:</p>
-      <code>https://raw.githubusercontent.com/g6c6tc6822-alt/gesturedj-source/main/apps.json</code>
-      <p style="margin-top:12px">Dann GestureDJ antippen → Installieren.</p>
+      <p style="margin-top:12px">Dann in der Quelle GestureDJ antippen → Installieren (bzw. „Free“/„Get“).</p>
     </div>
   </div>
 
@@ -84,5 +87,19 @@
     </div>
   </div>
 </main>
+<script>
+  const btn = document.getElementById('copy');
+  btn.addEventListener('click', async () => {
+    const text = document.getElementById('src').textContent.trim();
+    try {
+      await navigator.clipboard.writeText(text);
+      btn.textContent = 'Kopiert ✓ – jetzt in SideStore einfügen';
+    } catch (e) {
+      const r = document.createRange(); r.selectNodeContents(document.getElementById('src'));
+      const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+      btn.textContent = 'Adresse markiert – lange drücken → Kopieren';
+    }
+  });
+</script>
 </body>
 </html>
