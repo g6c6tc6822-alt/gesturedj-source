@@ -27,6 +27,9 @@
   a.btn.alt { background:transparent; color:var(--text); border:1px solid var(--line); }
   code { display:block; word-break:break-all; background:var(--bg); border:1px solid var(--line); padding:10px; border-radius:8px; font-size:13px; }
   ul { padding-left:20px; margin:6px 0 0; color:var(--muted); }
+  ol { padding-left:20px; margin:4px 0 8px; color:var(--muted); }
+  ol li { margin:4px 0; }
+  ol b, p b { color:var(--text); }
 </style>
 </head>
 <body>
@@ -58,9 +61,31 @@
   <div class="card step">
     <div class="num">2</div>
     <div>
-      <h2>SideStore installieren (einmalig)</h2>
-      <p>Kostenloser App-Store, der Apps alle 7 Tage selbst auf dem iPhone erneuert. Einmalig brauchst du einen PC und deine Apple-ID.</p>
-      <a class="btn alt" href="https://docs.sidestore.io/docs/installation/prerequisites">Anleitung SideStore</a>
+      <h2>SideStore installieren (einmalig, ca. 10 Min.)</h2>
+      <p>Kostenloser App-Store, der GestureDJ alle 7 Tage selbst erneuert. Du brauchst <b>einmal einen Windows-PC</b>, ein USB-Kabel und deine Apple-ID.</p>
+      <p><b>Am iPhone:</b></p>
+      <ol>
+        <li>Im App Store <b>„LocalDevVPN“</b> laden, öffnen, <b>Connect</b> tippen, VPN erlauben.</li>
+      </ol>
+      <a class="btn alt" href="https://apps.apple.com/search?term=LocalDevVPN">LocalDevVPN im App Store</a>
+      <p style="margin-top:12px"><b>Am PC:</b></p>
+      <ol>
+        <li><b>iTunes</b> von Apple installieren.</li>
+        <li><b>iloader</b> herunterladen und installieren.</li>
+        <li>iPhone per Kabel anstecken, entsperren, „Vertrauen“ tippen.</li>
+        <li>iloader öffnen → mit Apple-ID anmelden → iPhone auswählen → <b>„Install SideStore (Stable)“</b>.</li>
+      </ol>
+      <a class="btn alt" href="https://www.apple.com/itunes/download/win64">iTunes für Windows</a>
+      <a class="btn alt" href="https://github.com/nab138/iloader/releases/latest/download/iloader-windows-x64.msi">iloader für Windows</a>
+      <p style="margin-top:12px"><b>Wieder am iPhone:</b></p>
+      <ol>
+        <li>Einstellungen → Allgemein → <b>VPN und Geräteverwaltung</b> → deine Apple-ID → <b>Vertrauen</b>.</li>
+        <li>Einstellungen → Datenschutz &amp; Sicherheit → <b>Entwicklermodus</b> an (iPhone startet neu).</li>
+        <li>LocalDevVPN öffnen → <b>Connect</b>.</li>
+        <li><b>SideStore</b> öffnen und mit derselben Apple-ID anmelden.</li>
+        <li>In SideStore unter <b>My Apps</b> auf <b>„7 DAYS“</b> neben SideStore tippen.</li>
+      </ol>
+      <p>Mac-Anleitung: <a href="https://docs.sidestore.io/docs/installation/prerequisites" style="color:var(--accent)">docs.sidestore.io</a></p>
     </div>
   </div>
 
