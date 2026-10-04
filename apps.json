@@ -1,0 +1,44 @@
+{
+    "name":  "GestureDJ",
+    "identifier":  "com.justin.gesturedj.source",
+    "subtitle":  "Spotify per Handgesten",
+    "description":  "Private Quelle für GestureDJ.",
+    "iconURL":  "https://raw.githubusercontent.com/g6c6tc6822-alt/gesturedj-source/main/icon.png",
+    "website":  "https://g6c6tc6822-alt.github.io/gesturedj-source/",
+    "tintColor":  "#1DB954",
+    "apps":  [
+                 {
+                     "name":  "GestureDJ",
+                     "bundleIdentifier":  "com.justin.gesturedj",
+                     "developerName":  "Justin",
+                     "subtitle":  "Spotify per Handgesten steuern",
+                     "localizedDescription":  "Steuert Spotify über die Frontkamera:\n• Zeigefinger-Kreis: lauter/leiser\n• Hand wischen: nächster/vorheriger Song\n• Hand halten: Play/Pause\n\nBenötigt die Spotify-App und eine Freischaltung durch Justin.",
+                     "iconURL":  "https://raw.githubusercontent.com/g6c6tc6822-alt/gesturedj-source/main/icon.png",
+                     "tintColor":  "#1DB954",
+                     "category":  "entertainment",
+                     "screenshots":  [
+
+                                     ],
+                     "versions":  {
+                                      "version":  "1.0",
+                                      "buildVersion":  "4",
+                                      "date":  "2026-10-04T22:03:04+02:00",
+                                      "localizedDescription":  "Erste Version: Kreis-, Wisch- und Halte-Gesten.",
+                                      "downloadURL":  "https://github.com/g6c6tc6822-alt/gesturedj-source/releases/download/v1.0-4/GestureDJ.ipa",
+                                      "size":  340954,
+                                      "minOSVersion":  "17.0"
+                                  },
+                     "appPermissions":  {
+                                            "entitlements":  [
+
+                                                             ],
+                                            "privacy":  {
+                                                            "NSCameraUsageDescription":  "GestureDJ nutzt die Frontkamera, um deine Handgesten zu erkennen und damit Spotify zu steuern. Bilder werden nur auf dem Gerät ausgewertet und nie gespeichert."
+                                                        }
+                                        }
+                 }
+             ],
+    "news":  [
+
+             ]
+}
